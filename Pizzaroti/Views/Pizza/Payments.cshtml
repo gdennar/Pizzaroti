@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Pizzaroti.Models.TransactionModel>
+@{
+    ViewData["Title"] = "Payments";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Pizza Name</th>
+                <th scope="col">Pizza Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in Model)
+            {
+                <tr>
+                    <td>@transaction.PizzaName.</td>
+                    <td>@transaction.PizzaPrice.</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,189 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.mainBody{
+    padding: 0;
+}
+.background {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("../images/PizzarotiBackgrund.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: azure;
+    padding: 0;
+}
+
+
+.backgroundText {
+    color: white;
+    font-family: 'Ms Madi', cursive;
+    font-size: 5.5rem;
+    font-weight: 500;
+  
+}
+
+.backgroundInfo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeText{
+    letter-spacing:5px;
+}
+
+/*Pizza Index Styling*/
+
+.custom-pizza{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px;
+
+}
+.custom-image {
+    width: 85%;
+}
+
+.selectPizza-img {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    padding: 5px 5px 15px 5px;
+    border: 2px solid #191a19;
+}
+
+.selectPizza:hover {
+    transform: scale(1.05);
+}
+
+.badge-title {
+    background-color: #191a19;
+    padding: 2px;
+    color: #fff;
+}
+
+.badge-text {
+    background-color: #191a19;
+    padding: 2px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+/*Pizza Create Styling*/
+.create-form {
+    background-color: #191a19;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+input[type=text] {
+    padding: 4px;
+    width:50%;
+    border-radius:5px;
+}
+
+.wrap {
+    padding: 30px;
+    background: #191a19;
+    border-radius: 4px;
+}
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+
+    ul.ks-cboxtags li {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 10px;
+        padding-left: 8px;
+        border-radius: 4px;
+    }
+
+        ul.ks-cboxtags li label {
+            display: inline-block;
+            color: #333333;
+            font-size: 18px;
+            white-space: nowrap;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+        }
+            ul .ks-cboxtags li label {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+@media (prefers-reduced-motion: reduce) {
+    ul.ks-cboxtags li label::before {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}
+
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.form-input {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+li {
+    display: block;
+}
+
+
+
+ul.ks-cboxtags li label {
+    padding: 3px;
+    cursor: pointer;
+}
+
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    transition: all .2s;
+}
+

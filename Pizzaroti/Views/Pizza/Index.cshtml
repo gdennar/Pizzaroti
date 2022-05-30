@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Pizzaroti.Models.PizzasModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <div class="custom-pizza w-100">
+                <div class="col-8 custom-pizza-image">
+                    <img class="custom-image" src=~/images/Custom.png alt="Custom Pizza Image" />
+                </div>
+                <div class="col-4 align-items-center custom-order-text">
+                    <div class="align-middle custom-order">
+                        <h2>Create your own pizza</h2>
+                        <p>with our custom pizza maker</p>
+                        <a class="btn btn-primary" asp-action="Create" asp-route-id="">Create</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5 text-center align-items-center">
+            <h2 class="badge-title">Pick from our Selection of Pizzas</h2>
+        </div>
+        @foreach (var item in Model)
+        {
+            var imagePath = @item.ImageTitle + ".png";
+
+            <div class="col-md-4 mb-5 selectPizza">
+                <a asp-action="Checkout" class="pizza-img"
+               asp-route-PizzaName="@item.PizzaName"
+               asp-route-ImageTitle="@item.ImageTitle"
+               asp-route-PizzaPrice="@item.FinalPrice">
+                    <img src="~/images/@imagePath" class="w-100 selectPizza-img" asp-append-version="true"/>
+                    <div class="badge-text mb-5 text-center align-items-center"> @Html.DisplayFor(model => item.PizzaName)</div> 
+                </a>
+            </div>
+        }
+    </div>
+</div>

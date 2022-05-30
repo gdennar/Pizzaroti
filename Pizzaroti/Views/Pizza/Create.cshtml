@@ -1,0 +1,78 @@
+﻿@model Pizzaroti.Models.PizzasModel
+
+
+@{
+    ViewData["Title"] = "Create";
+    PizzasModel pizza = new PizzasModel();
+}
+
+<div class="container  mb-5">
+    <div class="row mb-5 text-center">
+        <h1>Serve your cravings</h1>
+        <span>create your own pizza</span>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="custom-pizza w-100 wrap">
+                <div class="col-6 custom-pizza-image">
+                    <img class="custom-image" src=~/images/MakeyourPizza.png alt="Custom Pizza Image" />
+                </div>
+                <div class="col-6 justify-content-center ">
+                    <form class="justify-content-center form-input method="post" asp-action="Create">
+                        <input class="mb-3 w-100" id="checkboxOne" type="text" asp-for="@pizza.PizzaName" placeholder="Enter your pizza name..." />
+                        <ul class="ks-cboxtags p-0 m-0">
+                            <li>
+                                <input type="checkbox" id="checkboxtwo" asp-for="@pizza.TomatoSauce" name="TomatoSauce" />
+                                <label asp-for="TomatoSauce"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxThree" asp-for="@pizza.Pineapple" name="Pineapple" />
+                                <label asp-for="Pineapple"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxFour" asp-for="@pizza.Ham" />
+                                <label asp-for="Ham"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxFive" asp-for="@pizza.Cheese"  />
+                                <label asp-for="Cheese"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxSix" asp-for="@pizza.Chicken"  />
+                                <label asp-for="Chicken"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxSeven" asp-for="@pizza.Mushroom" />
+                                <label asp-for="Mushroom"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxEight" asp-for="@pizza.Peperoni" />
+                                <label asp-for="Peperoni"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxNine" asp-for="@pizza.Tuna" />
+                                <label asp-for="Tuna"></label>
+
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkboxTen" asp-for="@pizza.Beef" />
+                                <label asp-for="Beef"></label>
+
+                            </li>
+                            <input type="submit" value="Create" class="btn btn-light mt-2" />
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
