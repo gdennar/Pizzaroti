@@ -28,14 +28,15 @@
         {
             var imagePath = @item.ImageTitle + ".png";
 
-            <div class="col-md-4 mb-5 selectPizza">
+            <div class="col-md-4 mb-5 selectPizza" data-hover="NGN @item.FinalPrice">
                 <a asp-action="Checkout" class="pizza-img"
                asp-route-PizzaName="@item.PizzaName"
                asp-route-ImageTitle="@item.ImageTitle"
                asp-route-PizzaPrice="@item.FinalPrice">
                     <img src="~/images/@imagePath" class="w-100 selectPizza-img" asp-append-version="true"/>
-                    <div class="badge-text mb-5 text-center align-items-center"> @Html.DisplayFor(model => item.PizzaName)</div> 
+                    <div class="badge-text mb-5 text-center align-items-center"> @Html.DisplayFor(model => item.PizzaName)</div>
                 </a>
+                
             </div>
         }
     </div>
